@@ -1,0 +1,9 @@
+# Read about `build.yaml` at https://pub.dev/packages/build_config
+builders:
+
+  mockBaseUrlBuilder:
+    import: "package:mock_url_generator/mock_url_generator.dart"
+    builder_factories: ["mockUrlBuilder"]
+    build_extensions: {"mock/env.json": ["mock/base_url.g.dart"]}
+    auto_apply: dependents
+    build_to: source
